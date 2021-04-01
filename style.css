@@ -1,0 +1,163 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-container{
+    padding: 100px 0;
+}
+
+.card{
+    height: 420px;
+    width: 800px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+}
+
+.card .left{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.left-box img{
+    position: absolute;
+    display: inline-block;
+    top: 280px;
+    left: 205px;
+    height: 20%;
+    z-index: 2;
+}
+
+.left-woman img{
+    width: 400px;
+    position: relative;
+    top: 50px;
+    left: -65px;
+    z-index: 1;
+}
+
+.left-background img{
+    position: relative;
+    top: -525px;
+    left: -390px;
+    width: 725px;
+}
+
+.card .right{
+    width: 50%;
+    padding: 70px 15px;
+}
+
+.faq{
+    padding: 20px 0;
+}
+
+.faq-item{
+    padding: 10px 0;
+}
+
+.faq-item:after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.faq-item img{
+    position: absolute;
+    right: 300px;
+}
+
+.faq-item span{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.faq-item img::after{
+    transform: rotate(180deg);
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    font-size: 11.5px;
+    line-height: 18px;
+    margin: 5px 0;
+}
+
+.faq-item:hover span{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.woman-2{
+    display: none;
+}
+
+.back-2{
+    display: none;
+}
+
+@media screen and (max-width: 856px){
+    .card-container{
+        padding: 150px 0 50px;
+    }
+    
+    .card{
+        height: 500px;
+        width: 330px;
+    }
+
+    .card .left{
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        right: 0;
+        height: 300px;
+    }
+
+    .card .right{
+        padding: 150px 0 0;
+        width: 80%;
+        height: 100%;
+    }
+
+    .left-woman img{
+        position: relative;
+        width: 280px;
+        top: 70px;
+        left: -20px;
+    }
+
+    .left-background{
+        position: relative;
+        top: 500px;
+        left: 385px;
+    }
+
+    .left-background .back-2{
+        width: 100%;
+    }
+
+    .woman-1, .back-1, .left-box{
+        display: none;
+    }
+
+    .woman-2, .back-2{
+        display: block;
+    }
+}
